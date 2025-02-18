@@ -2,6 +2,25 @@ nav {
     background-color: #2e7d32;
 }
 
+.bebas-neue-regular {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a h5 {
+    padding: 5px;
+    border-radius: 10px;
+}
+a h5:hover {
+    background-color: rgb(4, 100, 17);
+}
+
+body {
+    text-align: center;
+    background-color: rgb(223, 240, 219);
+}
+
 div ul a{
     margin-top: 10px;
 }
@@ -10,9 +29,15 @@ div ul a{
     margin: 20px;
 }
 
+.conteudo {
+    margin: 20px;
+    justify-content: center;
+}
+
 .btn {
     margin-top: 5px;
     background-color: #81c784;
+    margin-bottom: 5px;
 }
 .btn:hover {
     background-color: #9fe0a3;
