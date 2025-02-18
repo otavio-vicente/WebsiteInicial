@@ -1,0 +1,41 @@
+nav {
+    background-color: #2e7d32;
+}
+
+body {
+    text-align: center;
+}
+
+div ul a{
+    margin-top: 10px;
+}
+
+.conteudo {
+    margin: 20px;
+    justify-content: center;
+}
+
+.cards {
+    margin: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+    background-color: #81c784;
+    margin-bottom: 10px;
+}
+.btn:hover {
+    background-color: #9fe0a3;
+}
+
+form {
+    justify-items: center;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: #795548;
+    padding: 10px;
+    color: #ffffff;
+}
