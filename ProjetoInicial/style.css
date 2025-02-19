@@ -19,6 +19,7 @@ a h5:hover {
 body {
     text-align: center;
     background-color: rgb(223, 240, 219);
+    align-items: center;
 }
 
 div ul a{
@@ -27,6 +28,7 @@ div ul a{
 
 .card {
     margin: 20px;
+    max-width: 80rem;
 }
 
 .conteudo {
