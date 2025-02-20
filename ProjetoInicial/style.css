@@ -30,6 +30,24 @@ div ul a{
 .card {
     margin: 20px;
     max-width: 80rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-subconteudo {
+    background-color: #2e7d32;
+    color: #ffffff;
 }
 
 .conteudo {
