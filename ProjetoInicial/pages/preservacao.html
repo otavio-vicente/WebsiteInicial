@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raízes do Futuro</title>
+    <title>Ondas do Futuro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <style>
@@ -13,10 +13,19 @@
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand text-light bebas-neue-regular" href="../index.html"><h2>Raízes do Futuro</h2></a>
+            <a class="navbar-brand text-light bebas-neue-regular" href="index.html">
+                <img src="../images/logosite.png" style="max-width: 70px; margin-left: 15px;" alt="">
+            </a>
+            <div>
+              <h1 class="bebas-neue-regular text-light" style="margin-top: 10px;">Ondas do Futuro</h1>
+            </div>
             <div class="d-flex m-2">
-                <a href="../index.html" class="d-flex m-2 mt-2"><img src="../images/home.png" alt="home" width="30px" height="30px"></a>
-                <a href="reciclagem.html" class="btn m-2">Práticas Ecológicas e Reciclagem</a>
+                <a href="../index.html" class="d-flex m-2 mt-3"><img src="../images/home.png" alt="home" width="30px" height="30px"></a>
+                <ul class="d-flex list-unstyled m-0 align-items-center">    
+                    <li class="nav-item">
+                        <a class="nav-link text-light bebas-neue-regular" href="#"><h5>Contato</h5></a>
+                    </li>        
+                </ul>
                 <!-- <a href="preservacao.html" class="btn m-2">Preservação Ambiental e Iniciativas Verdes</a> -->
             </div>
             <!-- <ul class="d-flex list-unstyled">  
@@ -30,65 +39,106 @@
     <div class="conteudo row">
         <div class="card text-center col-sm-9 shadow-lg">
             <div class="card-header">
-                <h3 class="text-success">Preservação Ambiental e Iniciativas Verdes</h3>
+                <h3 class="text-success bebas-neue-regular">Ecossistemas Marinhos e Como Proteger</h3>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Preservação Ambiental: O Futuro Está em Nossas Mãos</h5>
-                <p class="card-text">A preservação ambiental é um dos pilares fundamentais da sustentabilidade. Sem a conservação dos ecossistemas e da biodiversidade, não podemos garantir um futuro saudável para as próximas gerações. As florestas, oceanos, rios e outros ambientes naturais desempenham um papel vital na regulação do clima, no fornecimento de alimentos e na purificação do ar e da água.
+                <h5 class="card-title">A Diversidade dos Ecossistemas Marinhos e a Necessidade de Proteção</h5>
+                <p class="card-text text-start">Os ecossistemas marinhos são complexos e vitais para o equilíbrio ambiental do planeta. Eles são responsáveis por regular o clima, fornecer alimentos e sustentar uma enorme diversidade de vida. No entanto, esses ecossistemas estão sendo ameaçados por várias formas de poluição, além do aquecimento global e da sobrepesca.                  
+                </p>
+            </div>               
+        </div>
+
+        <div class="container d-flex justify-content-center mb-3 mt-1">
+            <div id="carouselExampleIndicators" class="carousel slide col-sm-8" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../images/corais.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/pexe.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/areia.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>    
+
+        <div class="card col-sm-9">
+            <div class="card-body">
+                <h5 class="card-title">Principais Ecossistemas Marinhos</h5>
+                <p class="card-text">Recifes de corais: São considerados os "jardins tropicais" do mar, abrigando uma grande variedade de espécies marinhas. A poluição e o aumento da temperatura da água afetam a saúde dos recifes.
+                    Manguezais: São habitats fundamentais para várias espécies de peixes e aves. Sua degradação compromete a biodiversidade e a proteção contra tempestades.
+                    Praias e dunas: As áreas de transição entre a terra e o mar, que oferecem refúgio para diversas espécies de aves e plantas.                    
+                </p>
+            </div>
+        </div>
+
+        <h3 class="bebas-neue-regular">Ameaças aos Ecossistemas Marinhos:</h3>
+
+        <div class="card text-center col-sm-4 cards shadow-lg">
+            <div class="card-body">
+                <h5 class="card-title">Poluição plástica</h5>
+                <p class="card-text">Resíduos plásticos que chegam ao mar podem sufocar ou enredar animais marinhos.
+                    Desmatamento de manguezais: A destruição de manguezais devido ao urbanismo e à pesca predatória é um problema crescente.
                 </p>
             </div>               
         </div>
         
-        <div class="card text-center col-sm-3 cards shadow-lg">
+        <div class="card text-center col-sm-4 cards shadow-lg">
             <div class="card-body">
-                <h5 class="card-title">Conservação de Ecossistemas</h5>
-                <p class="card-text">Áreas protegidas, como parques nacionais e reservas biológicas, são essenciais para proteger a biodiversidade. Além disso, a preservação de ecossistemas como florestas e manguezais ajuda a combater as mudanças climáticas, absorvendo dióxido de carbono da atmosfera.
+                <h5 class="card-title">Mudanças climáticas</h5>
+                <p class="card-text">O aumento da temperatura das águas pode causar o branqueamento dos corais e afetar a fauna marinha.
+                </p>
+              </div>               
+        </div>
+        
+        <h3 class="bebas-neue-regular">Como Proteger os Ecossistemas Marinhos?</h3>
+
+        <div class="card text-center col-sm-4 cards shadow-lg">
+            <div class="card-body">
+                <h5 class="card-title">Redução do uso de plásticos</h5>
+                <p class="card-text">Evitar plásticos descartáveis e promover a reciclagem é essencial para evitar a contaminação dos oceanos.
+                </p>
+            </div>               
+        </div>
+
+        <div class="card text-center col-sm-4 cards shadow-lg">
+            <div class="card-body">
+                <h5 class="card-title">Preservação das áreas protegidas</h5>
+                <p class="card-text">Respeitar as áreas de proteção ambiental, como as zonas de recifes e manguezais, para garantir a conservação da biodiversidade marinha.
+                </p>
+            </div>               
+        </div>
+
+        <div class="card text-center col-sm-4 cards shadow-lg">
+            <div class="card-body">
+                <h5 class="card-title">Educação ambiental</h5>
+                <p class="card-text">Conscientizar a população sobre a importância dos ecossistemas marinhos e como práticas cotidianas podem ajudar a preservá-los.
                 </p>
             </div>               
         </div>
         
-        <div class="card text-center col-sm-3 cards shadow-lg">
+        <div class="card text-center col-sm-4 cards shadow-lg">
             <div class="card-body">
-                <h5 class="card-title">Iniciativas Verdes</h5>
-                <p class="card-text">Muitas cidades e empresas ao redor do mundo estão adotando práticas verdes, como a construção de prédios sustentáveis, o uso de energias renováveis e a promoção do transporte público eficiente. Exemplos de iniciativas incluem a instalação de painéis solares, a promoção da agricultura orgânica e o incentivo a hábitos de consumo mais conscientes.
+                <h5 class="card-title">Chamada para Ação</h5>
+                <p class="card-text">A preservação dos ecossistemas marinhos é uma responsabilidade de todos. Ao adotar hábitos mais sustentáveis e apoiar políticas de proteção ambiental, podemos garantir a saúde das nossas praias e dos mares para as próximas gerações.
                 </p>
-              </div>               
-        </div>
-        
-        <div class="card text-center col-sm-3 cards shadow-lg">
-            <div class="card-body">
-                <h5 class="card-title">Mudanças Climáticas</h5>
-                <p class="card-text">O aquecimento global e as mudanças climáticas são problemas reais que afetam nosso planeta. A redução das emissões de gases de efeito estufa, o investimento em tecnologias limpas e a adaptação a novos cenários climáticos são essenciais para mitigar os impactos negativos.
-                </p>
-              </div>               
+            </div>               
         </div>
     </div>
 
     <!-- <a href="reciclagem.html" class="btn">Práticas Ecológicas e Reciclagem</a> -->
 
-    <div class="container d-flex justify-content-center mb-3 mt-1">
-        <div id="carouselExampleIndicators" class="carousel slide col-sm-8" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../images/pexe.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/mato.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../images/clima.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>    
+    
 
     <footer>&copy; Todos os direitos reservados.</footer>
 
