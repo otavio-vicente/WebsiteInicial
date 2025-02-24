@@ -74,6 +74,7 @@ div ul a{
     background-color: #81c784;
     margin-bottom: 5px;
     width: 200px;
+    cursor: pointer;
 }
 .btn:hover {
     background-color: #9fe0a3;
@@ -90,4 +91,20 @@ footer {
     padding: 10px;
     color: #ffffff;
     margin-top: 10px;
+}
+
+.conteudoLerMais{
+    display: none;
+}
+.botaoLerMais {
+    background-color: #81c784;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.botaoLerMais:hover{
+    background-color: #9fe0a3;
 }

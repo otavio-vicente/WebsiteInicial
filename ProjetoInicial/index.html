@@ -15,32 +15,37 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid d-flex justify-content-between align-items-center position-relative">
       
+        <!-- Logo (Esquerda) -->
         <div class="d-flex align-items-center">
             <a class="navbar-brand text-light bebas-neue-regular" href="index.html">
                 <img src="images/logosite.png" style="max-width: 70px;" alt="">
             </a>
         </div>
-
-        <h1 class="navbar-brand bebas-neue-regular text-light position-absolute start-50 translate-middle-x" 
-            style="margin-top: 10px; font-size:35px;">Ondas do Futuro</h1>
+        
+        <!-- Título (Centralizado) -->
+        <h1 class="navbar-brand bebas-neue-regular text-light position-absolute start-50 translate-middle-x"
+            id="navbar-title">Ondas do Futuro</h1>
        
+        <!-- Botão de Menu Mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class=""><img src="images/list.svg" width="30px" alt=""></span>
         </button>
 
+        <!-- Links de Navegação (Direita) -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-light bebas-neue-regular" style="margin-top: 10px;" href="#"><h5>Contato</h5></a>
+                    <a class="nav-link text-light bebas-neue-regular" href="#"><h5>Contato</h5></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light bebas-neue-regular" style="margin-top: 10px;" href="pages/login.html"><h5>Login</h5></a>
+                    <a class="nav-link text-light bebas-neue-regular" href="pages/login.html"><h5>Login</h5></a>
                 </li>
+                
             </ul>
         </div>
     </div>
-  </nav>
+</nav>  
 
 
 
@@ -52,16 +57,18 @@
               <h3 class="text-success">Introdução e Impactos da Poluição nas Praias</h3>
           </div>
             <div class="col-md-4">
-                <img src="images/praiaPreservada.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="images/praiaPreservada.jpg" class="img-fluid">
             </div>
           <div class="col-md-8 text-start">
             <div class="card-body">
               <h5 class="card-title">A Importância da Preservação das Nossas Praias</h5>
               <p class="card-text more">A praia é um dos maiores patrimônios naturais do nosso planeta, oferecendo uma grande variedade de ecossistemas e biodiversidade. No entanto, a poluição tem se tornado uma ameaça crescente para esses ambientes, impactando a qualidade da água, a fauna e flora marinha, além de afetar diretamente a saúde humana.
+              
+              <span id="mais" class="conteudoLerMais">
+                  A sujeira na beira-mar, causada principalmente por resíduos de plástico, garrafas e outros materiais descartados de maneira inadequada, pode ter efeitos devastadores. Esses resíduos, que muitas vezes acabam sendo levados para o mar, representam um risco para os animais marinhos, que podem ingerir ou ficar presos neles. </span><button class="botaoLerMais" onclick="toggleTexto()" id="botaoLerMais" onclick="leiaMais(this)">Ler mais</button></p>
 
-                  A sujeira na beira-mar, causada principalmente por resíduos de plástico, garrafas e outros materiais descartados de maneira inadequada, pode ter efeitos devastadores. Esses resíduos, que muitas vezes acabam sendo levados para o mar, representam um risco para os animais marinhos, que podem ingerir ou ficar presos neles. <button onclick="showMore()">Ler mais</button></p>
               
-              
+                            
             </div>
           </div>
         </div>
@@ -74,6 +81,7 @@
         <div class="row g-0">
           
           <div class="col-md-8 text-start">
+            
             <div class="card-body">
               <h5 class="card-title">Impactos da Poluição nas Praias</h5>
               <p class="card-text"><strong>Destruição de ecossistemas marinhos:</strong> A poluição do mar afeta a vida marinha e prejudica ecossistemas como os recifes de corais e manguezais. <br>
@@ -82,7 +90,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <img src="images/praiaPoluida.jpg" class="img-fluid rounded-start" alt="...">
+            <img src="images/praiaPoluida.jpg" class="img-fluid" alt="...">
           </div>
         </div>
       </div>
@@ -97,16 +105,16 @@
 
     <div class="container col-md-8 my-5">
       <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-md-4">
+          <div class="col-md-6">
               <form method="post" class="bg-light p-4 rounded shadow-lg">
                   <h2 class="text-center text-success mb-3">Para receber atualizações, inscreva-se!</h2>
   
-                  <div class="mb-2">
+                  <div class="mb-2 col-md-12">
                       <label for="exampleInputEmail1" class="form-label fw-bold">Email</label>
                       <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" required>
                   </div>
   
-                  <div class="mb-2">
+                  <div class="mb-2 col-md-12">
                       <label for="exampleInputPassword1" class="form-label fw-bold">Senha</label>
                       <input type="password" class="form-control form-control-sm" id="exampleInputPassword1" required>
                   </div>
