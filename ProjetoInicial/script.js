@@ -11,20 +11,43 @@ function toggleTexto() {
     }
 }
 
-const fixedUser = "adm";
-const fixedPassword = "1234";
-    
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.getElementById("subscriptionForm").addEventListener("submit", function(event) {
+    let emailInput = document.getElementById("emailInput");
+    let emailError = document.getElementById("emailError");
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    const user = document.getElementById("user").value;
-    const password = document.getElementById("password").value;
-    const errorMsg = document.getElementById("errorMsg");
-
-    if (user === fixedUser && password === fixedPassword) {
-        alert("Login bem-sucedido!");
-        window.location.href = "adm.html";
+    if (!emailPattern.test(emailInput.value)) {
+        emailError.classList.remove("d-none"); 
+        emailInput.classList.add("is-invalid"); 
+        event.preventDefault(); 
     } else {
-        errorMsg.textContent = "Usuário ou senha incorretos!";
+        emailError.classList.add("d-none"); 
+        emailInput.classList.remove("is-invalid"); 
+    }
+});
+
+document.getElementById("atualizacoesForm").addEventListener("submit", function (event) {
+    event.preventDefault(); 
+
+    let user = document.getElementById("user").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    if (user === "admin" && password === "1234") {
+        Swal.fire({
+            icon: "success",
+            title: "Login realizado!",
+            text: "Redirecionando...",
+            timer: 2000,
+            showConfirmButton: false
+        }).then(() => {
+            window.location.href = "admin.html"; 
+        });
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Erro!",
+            text: "Usuário ou senha incorretos",
+            confirmButtonColor: "#d33"
+        });
     }
 });

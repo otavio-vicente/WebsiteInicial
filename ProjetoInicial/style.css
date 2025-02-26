@@ -8,11 +8,14 @@ nav {
     transform: translateY(-50%);
 }
 
-@media (max-width: 991px) { 
+@media (max-width: 991px) {
     #navbar-title {
-        font-size: 24px; /* Reduz o tamanho do título */
-        top: 10px; /* Move para cima */
-        transform: none; /* Remove o efeito de centralização */
+        font-size: 24px;
+        /* Reduz o tamanho do título */
+        top: 10px;
+        /* Move para cima */
+        transform: none;
+        /* Remove o efeito de centralização */
     }
 }
 
@@ -26,6 +29,7 @@ a h5 {
     padding: 5px;
     border-radius: 10px;
 }
+
 a h5:hover {
     background-color: rgb(4, 100, 17);
 }
@@ -36,7 +40,7 @@ body {
     align-items: center;
 }
 
-div ul a{
+div ul a {
     margin-top: 10px;
 }
 
@@ -53,6 +57,7 @@ div ul a{
         opacity: 0;
         transform: translateY(50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -73,16 +78,32 @@ div ul a{
     margin-top: 5px;
     background-color: #81c784;
     margin-bottom: 5px;
-    width: 200px;
     cursor: pointer;
+    width: 15%;
 }
-.btn:hover {
+
+.btn-form {
+    margin-top: 5px;
+    background-color: #81c784;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.btn:hover, .btn-form:hover {
     background-color: #9fe0a3;
 }
 
 form {
     justify-items: center;
     margin-bottom: 10px;
+}
+
+form h2 {
+    font-size: 20px;
 }
 
 footer {
@@ -93,9 +114,10 @@ footer {
     margin-top: 10px;
 }
 
-.conteudoLerMais{
+.conteudoLerMais {
     display: none;
 }
+
 .botaoLerMais {
     background-color: #81c784;
     color: #000000;
@@ -105,6 +127,11 @@ footer {
     margin-left: 5px;
     border-radius: 5px;
 }
-.botaoLerMais:hover{
+
+.botaoLerMais:hover {
     background-color: #9fe0a3;
+}
+
+.sessaoLogin {
+    min-height: 100vh;
 }
