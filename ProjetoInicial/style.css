@@ -96,7 +96,8 @@ div ul a {
     font-weight: 500;
 }
 
-.btn:hover, .btn-form:hover {
+.btn:hover,
+.btn-form:hover {
     color: #ffffff;
     background-color: rgb(14, 121, 29);
 }
