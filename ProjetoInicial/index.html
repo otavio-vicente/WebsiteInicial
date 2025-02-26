@@ -11,7 +11,8 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Doto:wght@100..900&family=Montserrat:ital@1&family=Sigmar&display=swap');
   </style>
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -127,25 +128,23 @@
 
           <div class="mb-2 col-md-12 text-start">
             <label for="exampleInputEmail1" class="form-label fw-bold">Email</label>
-            <input type="email" class="form-control form-control-sm" id="email" required>
+            <input type="email" class="form-control form-control-sm" id="email">
           </div>
 
           <div class="mb-2 col-md-12 text-start">
             <label for="exampleInputPassword1" class="form-label fw-bold">Senha</label>
-            <input type="password" class="form-control form-control-sm" id="password" required>
+            <input type="password" class="form-control form-control-sm" id="password">
           </div>
 
           <div class="col-md-12 text-start d-flex align-items-center">
             <div class="col-md-8 text-start">
-              <input type="checkbox" class="form-check-input me-2" id="exampleCheck1" required>
-            <label class="form-check-label text-dark" for="exampleCheck1">Desejo receber atualizações.</label>
+              <input type="checkbox" class="form-check-input me-2" id="exampleCheck1">
+              <label class="form-check-label text-dark" for="exampleCheck1">Desejo receber atualizações.</label>
             </div>
             <div class="col-md-4 text-end">
-              <button type="submit" class="btn-form btn-success btn-sm text-dark">Enviar</button>
+              <button type="submit" class="btn-form btn-success btn-sm text-white m-2">Enviar</button>
             </div>
           </div>
-
-          
         </form>
       </div>
 
@@ -156,6 +155,39 @@
   </div>
   </div>
 
+  <script>document.getElementById("atualizacoesForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Impede o envio do formulário imediatamente
+    
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let checkBox = document.getElementById("exampleCheck1").checked;
+
+    if (email === "" || password === "") {
+      Swal.fire({
+        icon: "warning",
+        title: "Campos obrigatórios!",
+        text: "Por favor, preencha todos os campos antes de enviar.",
+        confirmButtonColor: "#28a745"
+      });
+    } else if (!checkBox) {
+      Swal.fire({
+        icon: "info",
+        title: "Confirmação necessária!",
+        text: "Você precisa marcar a opção para receber atualizações.",
+        confirmButtonColor: "#28a745"
+      });
+    } else {
+      Swal.fire({
+        icon: "success",
+        title: "Inscrição realizada!",
+        text: "Obrigado por se inscrever!",
+        confirmButtonColor: "#28a745"
+      }).then(() => {
+            window.location.href = "index.html"; 
+      });
+    }
+  });
+</script>
 
   <footer>&copy; Todos os direitos reservados.</footer>
 

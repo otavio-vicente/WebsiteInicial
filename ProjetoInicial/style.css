@@ -76,25 +76,29 @@ div ul a {
 
 .btn {
     margin-top: 5px;
-    background-color: #81c784;
+    background-color: #58c05d;
     margin-bottom: 5px;
     cursor: pointer;
-    width: 15%;
+    width: 200px;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 .btn-form {
     margin-top: 5px;
-    background-color: #81c784;
+    background-color: #58c05d;
     margin-bottom: 5px;
     cursor: pointer;
     border-radius: 5px;
     border: 0;
     padding: 5px;
     width: 100%;
+    font-weight: 500;
 }
 
 .btn:hover, .btn-form:hover {
-    background-color: #9fe0a3;
+    color: #ffffff;
+    background-color: rgb(14, 121, 29);
 }
 
 form {
@@ -120,16 +124,16 @@ footer {
 
 .botaoLerMais {
     background-color: #81c784;
-    color: #000000;
+    color: #ffffff;
     border: none;
-    padding: 5px 10px;
     cursor: pointer;
     margin-left: 5px;
     border-radius: 5px;
+    font-weight: 500;
 }
 
 .botaoLerMais:hover {
-    background-color: #9fe0a3;
+    background-color: rgb(14, 121, 29);
 }
 
 .sessaoLogin {

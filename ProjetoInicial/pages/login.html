@@ -14,61 +14,82 @@
 
 <body>
 
-    <div class="sessaoLogin d-flex justify-content-center align-items-center">
-        <form id="loginForm" class="container col-md-4 bg-light p-4 rounded shadow-lg">
-            
-                <img src="../images/logosite.png" class="m-3" alt="">
+    <div class="sessaoLogin d-flex justify-content-center align-items-center min-vh-100">
+        <form id="loginForm" class="container col-md-4 bg-light p-4 rounded shadow-lg position-relative">
 
-                <div class="d-flex">
-                    <a href="../index.html"><img src="../images/returnArrow.png"></a>
-                    <h2 class="text-center text-success mt-2 mx-auto">ADM - Login</h2>
-                </div>
+            <!-- Ícone de voltar -->
+            <a href="../index.html" class="position-absolute" style="top: 10px; left: 15px;">
+                <img src="../images/returnArrow.png" width="30">
+            </a>
 
-                <div class="mb-2 col-md-12">
-                    <label for="user" class="form-label fw-bold">Usuário</label>
-                    <input type="text" class="form-control form-control-sm w-100" id="user" required>
-                </div>
+            <!-- Logo -->
+            <div class="text-center">
+                <img src="../images/logosite.png" class="m-3 img-fluid col-md-6" alt="Logo">
+            </div>
 
-                <div class="mb-2 col-md-12">
-                    <label for="password" class="form-label fw-bold">Senha</label>
-                    <input type="password" class="form-control form-control-sm w-100" id="password" required>
-                </div>
+            <!-- Título -->
+            <h2 class="text-center text-success mt-2">ADM - Login</h2>
 
-                <button type="submit"
-                    class="btn btn-success btn-sm w-100 d-block mt-3 mx-auto text-dark">Enviar</button>
-                <p id="errorMsg" class="text-danger text-center mt-2"></p>
-           
+            <!-- Campo Usuário -->
+            <div class="mb-2 col-md-12 text-start">
+                <label for="user" class="form-label fw-bold">Usuário</label>
+                <input type="text" class="form-control form-control-sm" id="user" >
+            </div>
+
+            <!-- Campo Senha -->
+            <div class="mb-2 col-md-12 text-start">
+                <label for="password" class="form-label fw-bold">Senha</label>
+                <input type="password" class="form-control form-control-sm" id="password" >
+            </div>
+
+            <!-- Botão de Enviar -->
+            <button type="submit"
+                class="btn-form btn btn-success btn-sm w-100 d-block mt-3 mx-auto b-0">Enviar</button>
+
+            <!-- Mensagem de Erro -->
+            <p id="errorMsg" class="text-danger text-center mt-2"></p>
+
         </form>
     </div>
 
     <script>
         document.getElementById("loginForm").addEventListener("submit", function (event) {
-            event.preventDefault(); 
+    event.preventDefault(); 
 
-            let user = document.getElementById("user").value.trim();
-            let password = document.getElementById("password").value.trim();
-    
-           
-            if (user === "admin" && password === "1234") {
-                Swal.fire({
-                    icon: "success",
-                    title: "Login realizado!",
-                    text: "Redirecionando...",
-                    timer: 2000,
-                    showConfirmButton: false
-                }).then(() => {
-                    window.location.href = "admin.html"; 
-                });
-            } else {
-                Swal.fire({
-                    icon: "error",
-                    title: "Erro!",
-                    text: "Usuário ou senha incorretos",
-                    confirmButtonColor: "#d33"
-                });
-            }
+    let user = document.getElementById("user").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    if (user === "" || password === "") {
+        Swal.fire({
+            icon: "warning",
+            title: "Campos obrigatórios!",
+            text: "Por favor, preencha todos os campos antes de enviar.",
+            confirmButtonColor: "#28a745"
         });
+        return; 
+    }
+
+    if (user === "admin" && password === "1234") {
+        Swal.fire({
+            icon: "success",
+            title: "Login realizado!",
+            text: "Redirecionando...",
+            timer: 2000,
+            showConfirmButton: false
+        }).then(() => {
+            window.location.href = "admin.html"; 
+        });
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Erro!",
+            text: "Usuário ou senha incorretos",
+            confirmButtonColor: "#d33"
+        });
+    }
+});
     </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
