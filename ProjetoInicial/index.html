@@ -11,7 +11,6 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Doto:wght@100..900&family=Montserrat:ital@1&family=Sigmar&display=swap');
   </style>
-  <script src="./script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -33,14 +32,14 @@
       <!-- Botão de Menu Mobile -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class=""><img src="images/list.svg" width="30px" alt=""></span>
+        <span class=""><img src="images/menu.png" width="30px" alt=""></span>
       </button>
 
       <!-- Links de Navegação (Direita) -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav d-flex align-items-center">
           <li class="nav-item">
-            <a class="nav-link text-light bebas-neue-regular" href="#">
+            <a id="btnContato" class=" nav-link text-light bebas-neue-regular" href="#">
               <h5>Contato</h5>
             </a>
           </li>
@@ -128,12 +127,12 @@
 
           <div class="mb-2 col-md-12 text-start">
             <label for="exampleInputEmail1" class="form-label fw-bold">Email</label>
-            <input type="email" class="form-control form-control-sm" id="email">
+            <input type="email" class="input-form form-control form-control-sm" id="email">
           </div>
 
           <div class="mb-2 col-md-12 text-start">
             <label for="exampleInputPassword1" class="form-label fw-bold">Senha</label>
-            <input type="password" class="form-control form-control-sm" id="password">
+            <input type="password" class="input-form form-control form-control-sm" id="password">
           </div>
 
           <div class="col-md-12 text-start d-flex align-items-center">
@@ -155,38 +154,7 @@
   </div>
   </div>
 
-  <script>document.getElementById("atualizacoesForm").addEventListener("submit", function (event) {
-      event.preventDefault(); // Impede o envio do formulário imediatamente
-
-      let email = document.getElementById("email").value.trim();
-      let password = document.getElementById("password").value.trim();
-      let checkBox = document.getElementById("exampleCheck1").checked;
-
-      if (email === "" || password === "") {
-        Swal.fire({
-          icon: "warning",
-          title: "Campos obrigatórios!",
-          text: "Por favor, preencha todos os campos antes de enviar.",
-          confirmButtonColor: "#28a745"
-        });
-      } else if (!checkBox) {
-        Swal.fire({
-          icon: "info",
-          title: "Confirmação necessária!",
-          text: "Você precisa marcar a opção para receber atualizações.",
-          confirmButtonColor: "#28a745"
-        });
-      } else {
-        Swal.fire({
-          icon: "success",
-          title: "Inscrição realizada!",
-          text: "Obrigado por se inscrever!",
-          confirmButtonColor: "#28a745"
-        }).then(() => {
-          window.location.href = "index.html";
-        });
-      }
-    });
+  <script>
   </script>
 
   <footer>&copy; Todos os direitos reservados.</footer>
@@ -203,6 +171,8 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
+  <script src="./js/pgs-conteudos.js"></script>
+  <script src="./script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
